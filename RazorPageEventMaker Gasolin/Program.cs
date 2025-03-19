@@ -1,7 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using RazorPageEventMaker_Gasolin.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<RazorPageEventMaker_GasolinContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RazorPageEventMaker_GasolinContext") ?? throw new InvalidOperationException("Connection string 'RazorPageEventMaker_GasolinContext' not found.")));
 
 var app = builder.Build();
 
