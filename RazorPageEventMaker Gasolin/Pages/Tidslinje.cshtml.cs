@@ -1,12 +1,12 @@
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace RazorPageEventMaker_Gasolin.Pages;
 
-public class PrivacyModel : PageModel
+public class Tidslinje : PageModel
 {
-    private readonly ILogger<PrivacyModel> _logger;
+    private readonly ILogger<Tidslinje> _logger;
 
-    public PrivacyModel(ILogger<PrivacyModel> logger)
+    public Tidslinje(ILogger<Tidslinje> logger)
     {
         _logger = logger;
     }

@@ -1,8 +1,9 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
+namespace RazorPageEventMaker_Gasolin.Pages.BioInterview
+
 {
-    public class BioInervieuwpageModel : PageModel
+    public class Biografier : PageModel
     {
         public void OnGet()
         {
