@@ -1,28 +1,198 @@
 ﻿@page
-@model Tidslinje
-@{}
-<!DOCTYPE html>
+@model TidslinjeModel
+@{
+    ViewData["Title"] = "Gasolins tidslinje";
+}
+<div class="title">
+    <h1>Gasolins tidslinje</h1>
+    <p>Et liv i sus og dus</p>
+</div>
 
-        <style>
-            table, th, td {
-                border: 1px solid black;
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        background: url(https://billetto.imgix.net/k2EWcPWa6RC4cWTLad8xok41?w=1440&h=810&fit=crop&auto=compress%2Cformat&rect=0%2C0%2C1920%2C801&s=eb952e377eb25448d63ec2b0732982cc) no-repeat center fixed;
+        background-size: cover;
+        color: #fff;
+        padding: 2em;
+        position: relative;
+    }
+
+        body::before {
+            content: '';
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        margin: 0.3em;
+        font-size: 3em;
+    }
+
+    h2 {
+        margin-bottom: 0.5em;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+        .title p {
+            color: #0d71fc;
+            font-size: 1.3em;
+            letter-spacing: 2px;
+        }
+
+    .timeline {
+        margin: 5em auto;
+        max-width: 34em;
+        position: relative;
+    }
+
+    .checkpoint {
+        width: 100%;
+        padding: 2em 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+        .checkpoint div {
+            border: 2px solid #888;
+            border-radius: 1em;
+            padding: 1.5em;
+            background: rgba(20, 20, 20, 0.85);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            width: 45%;
+        }
+
+        .checkpoint p {
+            line-height: 1.6em;
+            color: #ccc;
+        }
+
+        /* Tidslinje linje */
+        .checkpoint::before {
+            content: '';
+            background: #E67E22;
+            width: 3px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Venstre side */
+        .checkpoint:nth-child(odd) {
+            flex-direction: row;
+        }
+
+            .checkpoint:nth-child(odd)::before {
+                left: 50%;
+                transform: translateX(-50%);
             }
-        </style>
 
-@* Her laver vi tabellen *@
-        <title>Tidslinje</title>
-    </head>
+            .checkpoint:nth-child(odd) div {
+                margin-left: auto;
+                text-align: left;
+            }
 
-    <body>
-       <table style="margin-left:12px"; width="75%">
-           <tr style="background-color:azure ;">
-               <th>Id</th>
-               <th>Name</th>
-               <th>Place</th>
-               <th>Date</th>
-           </tr>
-       </table>
-    </body>
+        /* Højre side */
+        .checkpoint:nth-child(even) {
+            flex-direction: row-reverse;
+        }
 
+            .checkpoint:nth-child(even)::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
 
-</html>
+            .checkpoint:nth-child(even) div {
+                margin-right: auto;
+                text-align: left;
+            }
+
+        /* Punkt på linjen */
+        .checkpoint::after {
+            content: '';
+            background: #E67E22;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            box-shadow: 0 0 10px #E67E22;
+        }
+
+</style>
+
+<div class="timeline">
+    <div class="checkpoint">
+        <div>
+            <h2>1969</h2>
+            <p>Gasolin dannes i København af Kim Larsen, Franz Beckerlee og Wili Jønsson. Gruppen starter som et eksperimenterende rockband.</p>
+        </div>
+    </div>
+
+    <div class="checkpoint">
+        <div>
+            <h2>1971</h2>
+            <p>Debutalbummet "Gasolin'" udkommer, men får en blandet modtagelse. Bandet arbejder videre for at finde sin lyd.</p>
+        </div>
+    </div>
+
+    <div class="checkpoint">
+        <div>
+            <h2>1974</h2>
+            <p>Albummene "Gasolin' 2" og "Gasolin' 3" udkommer og bliver store succeser. Bandet opnår sit danske gennembrud.</p>
+        </div>
+    </div>
+
+    <div class="checkpoint">
+        <div>
+            <h2>1976</h2>
+            <p>Livealbummet "Live i Skandinavien" viser Gasolins energi på scenen. Bandet forsøger samtidig at slå igennem internationalt.</p>
+        </div>
+    </div>
+
+    <div class="checkpoint">
+        <div>
+            <h2>1977</h2>
+            <p>Gasolin spiller deres sidste koncert i KB Hallen. Interne uenigheder og manglende international succes fører til bruddet.</p>
+        </div>
+    </div>
+
+    <div class="checkpoint">
+        <div>
+            <h2>1978</h2>
+            <p>Bandet opløses officielt. Kim Larsen fortsætter sin karriere som soloartist og opnår stor succes.</p>
+        </div>
+    </div>
+
+    <div class="checkpoint">
+        <div>
+            <h2>1986</h2>
+            <p>Opsamlingsalbummet "Rabalderstræde Forever" udkommer og bliver en stor succes blandt både gamle og nye fans.</p>
+        </div>
+    </div>
+
+    <div class="checkpoint">
+        <div>
+            <h2>2003</h2>
+            <p>Dokumentaren "Gasolin'" rammer biograferne og skaber en ny bølge af interesse for bandets musik.</p>
+        </div>
+    </div>
+</div>

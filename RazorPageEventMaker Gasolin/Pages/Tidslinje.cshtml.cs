@@ -1,18 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace RazorPageEventMaker_Gasolin.Pages;
-
-public class Tidslinje : PageModel
+namespace RazorPageEventMaker_Gasolin.Pages
 {
-    private readonly ILogger<Tidslinje> _logger;
-
-    public Tidslinje(ILogger<Tidslinje> logger)
+    public class TidslinjeModel : PageModel
     {
-        _logger = logger;
-    }
-
-    public void OnGet()
-    {
+        public void OnGet()
+        {
+        }
     }
 }
-
