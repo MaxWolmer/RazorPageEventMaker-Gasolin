@@ -12,18 +12,8 @@ namespace RazorPageEventMaker_Gasolin.Pages.BioInterview
 {
     public class IndexModel : PageModel
     {
-        private readonly RazorPageEventMaker_Gasolin.Data.RazorPageEventMaker_GasolinContext _context;
-
-        public IndexModel(RazorPageEventMaker_Gasolin.Data.RazorPageEventMaker_GasolinContext context)
-        {
-            _context = context;
-        }
 
         public IList<BioInterviewModel> BioInterview { get;set; } = default!;
 
-        public async Task OnGetAsync()
-        {
-            BioInterview = await _context.BioInterview.ToListAsync();
-        }
     }
 }
