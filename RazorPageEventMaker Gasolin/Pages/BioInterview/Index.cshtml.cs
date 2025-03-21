@@ -13,7 +13,7 @@ namespace RazorPageEventMaker_Gasolin.Pages.BioInterview
     public class IndexModel : PageModel
     {
 
-        public IList<BioInterviewModel> BioInterview { get;set; } = default!;
+        public IList<BioInterviewModel> BioInterview { get; set; } = default!;
 
     }
 }
