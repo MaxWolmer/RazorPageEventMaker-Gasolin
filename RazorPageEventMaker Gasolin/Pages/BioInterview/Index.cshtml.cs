@@ -19,11 +19,18 @@ namespace RazorPageEventMaker_Gasolin.Pages.BioInterview
             _context = context;
         }
 
-        public IList<BioInterviewModel> BioInterview { get;set; } = default!;
+        public IList<BioInterviewModel> BioInterview { get; set; } = default!;
 
+        /// <summary>
+        /// PLuder plader er de bedste madder
+        /// </summary>
+        /// <returns></returns>
         public async Task OnGetAsync()
+
         {
-            BioInterview = await _context.BioInterview.ToListAsync();
+
+            //Har udkommenteret nedenstående fordi den gør en masse som vi ikke har lært om endnu. Den mangler en database.
+            //BioInterview = await _context.BioInterview.ToListAsync();
         }
     }
 }

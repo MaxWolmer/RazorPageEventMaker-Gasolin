@@ -3,10 +3,13 @@
 @{
     ViewData["Title"] = "Gasolins tidslinje";
 }
-<div class="title">
-    <h1>Gasolins tidslinje</h1>
-    <p>Et liv i sus og dus</p>
-</div>
+@for(int i=0;i<5;i++)
+{
+    <div class="title">
+        <h1>Gasolins tidslinje</h1>
+        <p>Et liv i sus og dus</p>
+    </div>
+}
 
 <style>
     body {
