@@ -6,14 +6,41 @@
 }
 
 <style>
+    body {
+        background-color: dimgray;
+        color: white; /* Set text color to white */
+        /* Set link color to a darker blue */
+        a
+
+    {
+        color: #003366; /* Dark blue color */
+    }
+
+    /* Optionally, you can change the hover color as well */
+    a:hover {
+        color: #002244; /* Even darker blue when hovering */
+    }
+
     h4 {
         margin-bottom: 30px; /* Space below */
-        margin-top: 30px; /* Space above */
     }
 
     h1 {
         margin-bottom: 100px; /* Space below */
         margin-top: 50px; /* Space above */
+    }
+
+    /* 
+    Guidens from: https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_wrap
+    Picture and text (flex_box(s)) and (flex_item(s) next to eachother when enough screen space, otherwijs picture above texst.
+    */
+    .flex-box{ 
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .flex_item{
+        margin: 30px;
+       max-width: 500px;
     }
 </style>
 
@@ -21,11 +48,14 @@
 
 
 <div>
+    <div class="flex-box">
+        <div class="flex_item">
+    <img src="BioInterview/Photos/Kim Larsen.jpg" class="rounded" alt="Kim Larsen"; style="max-height:170px;">
+        </div>
 
-    <img src="BioInterview/Photos/Kim Larsen.jpg" class="rounded" alt="Kim Larsen" ; style="max-height:183px;max-width:180px;">
-
+        <div class="flex_item">
     <h4> Biografi: Kim Larsen </h4>
-    <a href="https://youtu.be/bYxaXqWarHE?si=nNKKHfYh0oc8HReF" target="_blank">  Link til interview </a>
+            <a href="https://youtu.be/bYxaXqWarHE?si=nNKKHfYh0oc8HReF" target="_blank">  Link til interview (Kilde: Youtube)</a>
 
     <p> Baggrundsinformation: </p>
 
@@ -41,16 +71,23 @@
     <p> Kim Mellius Flyvholm Larsen var en dansk sanger, sangskriver, forfatter og guitarist. Han begyndte sin musikkarriere i 1968 efter en kort periode som folkeskolelærer og blev kendt fra 1969 som medlem af rockgruppen Gasolin. Under sin tid med Gasolin (som varede indtil 1978) udgav Larsen også soloalbum og plader med sit fritidsband, som optrådte under flere forskellige navne. Efter Gasolins opløsning fortsatte Larsen som soloartist og bandleder. </p>
 
     <p style="margin-bottom: 150px;"> (Kilde: Wikipedia) </p>
-    </a>
+            </a>
+        </div>
+    </div>
 
+    <div class="flex-box">
     <p>
-        <img src="BioInterview/Photos/Franz Beckerlee.jpg" class="rounded" alt="Franz Beckerlee" ; style="max-height:183px;max-width:180px">
-    
+        <div class="flex_item">
+        <img src="BioInterview/Photos/Franz Beckerlee.jpg" class="rounded" alt="Franz Beckerlee"; style="max-height:300px;">
+            </div>
+
+            <div class="flex_item">
         <h4> Biografi: Franz Beckerlee </h4>
 
-        <a href="https://youtu.be/PoHwxGFGj3s?si=YPXDYkNNioK5loVw" target="_blank">  Link til interview </a>
+        <a href="https://youtu.be/PoHwxGFGj3s?si=YPXDYkNNioK5loVw" target="_blank">  Link til interview (Kilde: Youtube)</a>
 
     <p> Baggrundsinformation:</p>
+
     <ul style="margin-bottom: 40px;">
         <li> Født: 15. august 1942 (82 år) København, Danmark </li>
         <li> Beskæftigelse: Saxofonist, billedhugger, skuespiller, komponist, DJ-producer,sangskriver, guitarist </li>
@@ -60,15 +97,21 @@
     <p>Franz Beckerlee spiller guitar og saxofon. Han begyndte at spille saxofon som 12-årig. Sammen med Hugh Steinmetz, Niels Harrit, Steffen Andersen og Bo Thrige Andersen dannede han The Contemporary Jazz Quintet, som spillede avantgardejazz. Kvintetten fik megen ros af kritikere og presse, men fik ingen større succes hos publikum. Franz fik tildelt årets jazzlegat i 1964 og 1968. Derefter kom Franz Beckerlee med i Gasolin', hvor han spiller guitar a la Jimi Hendrix. Efter Gasolin' var Franz Beckerlee med i Christianshavns Bluesband sammen med Søren Berlev og Lone Kellermann. </p>
 
     <p style="margin-bottom: 150px;"> (Kilde: Wikipedia) </p>
+        </p>
+    </div>
+    </div>
 
-    </p>
-
+    <div class="flex-box">
     <p>
-        <img src="BioInterview/Photos/Wili Jønsson.jpg" class="rounded" alt="Wili Jønsson" ; style="max-height:183px;max-width:180px">
+        <div class="flex_item">
+            <img src="BioInterview/Photos/Wili Jønsson.jpg" class="rounded" alt="Wili Jønsson"; style="max-height:150px;">
+        </div>
 
+        <div class="flex_item">
         <h4> Biografi: Wili Jønsson</h4>
 
     <p> Baggrundsinformation:</p>
+
     <ul style="margin-bottom: 40px;">
         <li> Født: 27. marts 1942 (82 år) København, Danmark</li>
         <li> Beskæftigelse: Skuespiller, komponist, bassist, sangskriver</li>
@@ -80,15 +123,22 @@
 
     <p style="margin-bottom: 150px;">(Kilde: Wikipedia)</p>
     </p>
+    </div>
+    </div>
 
+    <div class="flex-box">
     <p>
-        <img src="BioInterview/Photos/Søren Charlie Berlev.jpg" class="rounded" alt="Søren Charlie Berlev" ; style="max-height:183px;max-width:180px">
+        <div class="flex_item">
+            <img src="BioInterview/Photos/Søren Charlie Berlev.jpg" class="rounded" alt="Søren Charlie Berlev"; style="max-height:150px;">
+        </div>
 
+        <div class="flex_item">
         <h4> Biografi: Søren Charlie Berlev</h4>
 
-        <a href="https://youtu.be/1YZoN1-T-8c?si=2wBT2XFmfwkQwGEK" target="_blank">  Link til interview </a>
+        <a href="https://youtu.be/1YZoN1-T-8c?si=2wBT2XFmfwkQwGEK" target="_blank">  Link til interview (Kilde: Youtube)</a>
 
     <p> Baggrundsinformation:</p>
+
     <ul style="margin-bottom: 40px;">
         <li> Født: 4. maj 1950 (74 år) København, Danmark</li>
         <li> Beskæftigelse: Skuespiller, komponist, trommeslager, sangskriver</li>
@@ -113,10 +163,16 @@
 
     <p style="margin-bottom: 150px;">(Kilde: Wikipedia)</p>
     </p>
+</div>
+    </div>
 
+    <div class="flex-box">
     <p>
-        <img src="BioInterview/Photos/Bjørn Uglebjerg.jpg" class="rounded" alt="Bjørn Uglebjerg" ; style="max-height:183px;max-width:180px">
+        <div class="flex_item">
+            <img src="BioInterview/Photos/Bjørn Uglebjerg.jpg" class="rounded" alt="Bjørn Uglebjerg"; style="max-height:147px;">
+        </div>
 
+        <div class="flex_item">
         <h4> Biografi: Bjørn Uglebjerg</h4>
 
     <p>Baggrundsinformation:</p>
@@ -148,5 +204,6 @@
 
     <p style="margin-bottom: 150px;">(Kilde: Wikipedia)</p>
     </p>
-
+</div>
+    </div>
 </div>

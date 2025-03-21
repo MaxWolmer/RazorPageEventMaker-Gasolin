@@ -1,30 +1,56 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Gasolin";
 }
 
 <style>
-    /* Mørk baggrund for hele siden */
+
     body {
-        background-color: #1a1a1a; /* Mørk grå */
-        color: #ffff; /* Hvid tekst */
+        margin: 0;
+        font-family: sans-serif;
+        background: url('https://images.genius.com/b37040be36d34fd2f52910d2865adcba.719x719x1.jpg') no-repeat center fixed;
+        background-size: cover;
+        color: #fff;
     }
 
-    /* Tilpasning af links */
-    a {
-        color: #ffa500; /* Orange farve til links */
+    .containerHomePage {
+        max-width: 900px;
+        margin: auto;
+        padding: 3em 1em;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     }
 
-        a:hover {
-            color: #B22222; /* Lysere orange ved hover */
-        }
+    h1 {
+        font-size: 3em;
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+        line-height: 1.5;
+    }
+
+    .band-image {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+        margin: 5em 0;
+    }
 </style>
 
-<div class="text-center">
-    
+<header>
+</header>
 
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="containerHomePage">
+    <h1>Velkommen til Gasolins Univers</h1>
+    <p>Gasolin er et af de mest legendariske danske rockbands nogensinde. Bandet, der blev dannet i 1969, bestod af Kim Larsen, Franz Beckerlee, Wili Jønsson og Søren Berlev. Med deres unikke lyd og energiske optrædener skrev de sig ind i dansk musikhistorie.</p>
+
+    <img src="https://i.pinimg.com/originals/29/18/4b/29184bd04332da4abae2e3d84b0e3605.jpg" alt="Gasolin band" class="band-image">
+
+    <p>På denne hjemmeside kan du udforske deres tidslinje, biografi og se interviews med bandmedlemmerne.</p>
+
 </div>
-
